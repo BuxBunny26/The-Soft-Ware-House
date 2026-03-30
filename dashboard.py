@@ -739,5 +739,6 @@ if __name__ == "__main__":
     print("Loading workbook data...")
     get_data()
     print(f"Loaded {len(_cache['users'])} users, {len(_cache['skus'])} SKUs")
-    print("Starting dashboard at http://localhost:5000")
-    app.run(debug=True, host="127.0.0.1", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    print(f"Starting dashboard at http://localhost:{port}")
+    app.run(debug=False, host="0.0.0.0", port=port)

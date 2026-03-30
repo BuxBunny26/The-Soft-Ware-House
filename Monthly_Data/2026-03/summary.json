@@ -1,0 +1,3390 @@
+{
+  "users": [
+    {
+      "name": "aaron.mbatha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Abel.Simelane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Abisai.Mataruse",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "abraham.mokwena@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "abraham.ngoma",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "abrahamchristoffelbraam.radley",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "abrie.oosthuizen@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "adeel.hoosen@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Admin",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 E3"
+    },
+    {
+      "name": "adminrs",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "admire.chipanera@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Adri Ludick",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Copilot Studio Viral Trial+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Adri Ludick Old",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Adriaan Bouwer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Adriaan Schoonbee",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "adriaanb",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "afrika.mogapi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "AFS Application",
+      "licenses": "Microsoft Power Automate Free+Exchange Online (Plan 1)"
+    },
+    {
+      "name": "AFS Reports SM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ajs",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "akesh.premraj",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Alberto.Adao",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "aleitao",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Alex Outram",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "alfred.molefe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "alicia.higgins",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Alistair.Davis",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Allan Stuurman",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "allan.magopa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "amo.mosito@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "amon.letsoalo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "AMS Guest",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Anben.Pillay",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "andile.mchunu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "AndisiweL",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "andiswa.zulu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "andiswa@kalagadi.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Andre.Nagel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Andre.Nagel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "andre.viljoen2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Andrew Robb",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Andrew Robb",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Andronicca.Ndhlovu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "andykotze612",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Anela.Visagie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Annah Modutwane",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "annahm@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Annemie Willer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Power BI Premium Per User+Microsoft Copilot Studio Viral Trial+Microsoft Power Apps Plan 2 Trial+Microsoft 365 E3+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "annemiewiller@gmail.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "annette.hall@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ansley.wilkins@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Antila.Kaluba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "anton.ferreira",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Antonio Ehrke",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Anuraag.Gungaram",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Armindo Mucacho",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Arnold van Zyl",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Aubrey Tshabalala",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "avdwesthuizen",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "aventer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Baloyi",
+      "licenses": "False"
+    },
+    {
+      "name": "baneles",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Barries Barnard",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Barry.Nyuswa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bart.pieterse@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Beket",
+      "licenses": "False"
+    },
+    {
+      "name": "ben.mzimela",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bennie.wichers@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Bernard Lopi Molangoane",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Bernett.Morodi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Bernett.Morodi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bertus.bornebroek@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bertus.deysel@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Betty Monyepao",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "betty.selahle",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "betty.selahle@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "beulise.vermaak@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Beyneveldt",
+      "licenses": "False"
+    },
+    {
+      "name": "bhoey",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "BiancaC",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Bianka De Beer",
+      "licenses": "Microsoft Power Automate Free+Microsoft Power Apps Plan 2 Trial+Microsoft Fabric (Free)+Microsoft Copilot Studio Viral Trial+Microsoft Power Apps for Developer+Power Pages vTrial for Makers+Microsoft Defender for Office 365 (Plan 2)+Dynamics 365 Customer Insights Self-Service+Microsoft 365 Business Premium"
+    },
+    {
+      "name": "billy.matikane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "blessing.nchabeleng@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Blomerus.Steyn",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bnyuswa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "boikanyo.mabale@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Boitumelo Makgamatha",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Boitumelo.Kakora",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "BoitumeloM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bokang.khathali",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bonga.dlamini",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bongani.malinga1@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Bongani.Mlambo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bongani.ngcobo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Bongimusa.Msimango",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Brent.Africa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Brian Gumede",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Brian.Mashile",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bruce.annandale",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bruce.annandale@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "bushy.mashilo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "busi.xhoma",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "busis2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "CalvinM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Canio.Langa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "carl.erasmus",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "carl.landsberg",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "carlo.soares",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Carmen Viljoen",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "caroline.lekota@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Catherinem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Cedric.Mashamaite",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "CendyB",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Chama.Kapambwe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Charl Kuun",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "charl.reyneke@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "charlottem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Chaudhry.Amir",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Cherese.Bosch",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Chicco Tivane",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Chisindi",
+      "licenses": "False"
+    },
+    {
+      "name": "Chris Mostert",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Chris Vogel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Chris.Jager",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "chrish",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "chrish",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Christene Fourie",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "christenef",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Christian Geel",
+      "licenses": "Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Christian Hattingh",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Christie",
+      "licenses": "Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Christo.BOTHA",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Christopher.Kichini",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "chrisvogel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Cindy.Schoonwinkel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "CJ Woller",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "claude.olifant@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Cleavon.Isaacs",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ClementS",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Cobus.Grobler",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Coetzer",
+      "licenses": "False"
+    },
+    {
+      "name": "Colleen Pyper",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Collen.Ntsoane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Consalves",
+      "licenses": "False"
+    },
+    {
+      "name": "cor.human@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "corneille.mij",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "cornelia.kruger@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "cornelius.groenewald@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "CostaM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "CosterM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Craig.Curling",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Croffat.Mngonyama",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "d.crous",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Damien.Kisenga",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Daniel Molapo",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 E3+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Daniel",
+      "licenses": "False"
+    },
+    {
+      "name": "Daniel.Muller",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "danielm",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "David Lipange",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "David Viljoen",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard+Microsoft Power Automate Free"
+    },
+    {
+      "name": "david.maimane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "david.mashau@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "david.sneddon@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Davis",
+      "licenses": "False"
+    },
+    {
+      "name": "Denise.Williams",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Deon Gaarkeuken",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Deon Gaarkeuken",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Power BI Premium Per User+Microsoft 365 E3+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "deon.briel@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Derick Du Piesanie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Derick Pretorius",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Desmond Ngomane",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Dewald.Benadie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "DewaldP",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "dhayalan.naidoo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Dian Leff",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Dieudonne.Makonga",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "dikeledi.malebye@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "DikelediL",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Divia.Govender",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "DMilligan@astecindustries.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "dorothy.stemmer@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Douglas Prout-Jones",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Dragon Vision",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "DuPlessis",
+      "licenses": "False"
+    },
+    {
+      "name": "Eben Prinsloo",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "ebson.matshili@premierfmcg.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "edmund.raymond",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Edward Pieterse Jnr",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Apps for Developer+Microsoft 365 E3+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Edward Pieterse Snr",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Edwin Gibbons",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Elop.Mosehle",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "elvis.soobramoney",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Emmanuel.Mabwe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "emmanuel.nkosi@kalagadi.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ephraim.mahlakwane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ephraim.Nyundu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ercilia.bina@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "erena.moyo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ernest.makine",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ernest.makine",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Esther.Mwape",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ethel Mienie",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "eugene",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Eugene Scheepers",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "eugene.pretorius",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "eulanda.sibande@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "eulanda.sibande@valterraplatinum.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Evert Viljoen",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Premium"
+    },
+    {
+      "name": "evertv@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "evrtv@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "EXT Lotus1",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "External Ahmed SMB",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "External Brito SBM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "External Moataz SBM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "External Naveen SBM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "External Vadim SBM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "fazila.karreem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Fernandez",
+      "licenses": "False"
+    },
+    {
+      "name": "fesi.sechaba@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "fikile.mahlangu@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "flip.venter",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "FLIRIRVM1",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "flirirvm2",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "flirirvm3",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "fortune.mkhize",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "fouche.marnus@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Francios Pretorius",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "francisco.litsuge@premierfmcg.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Francois Pienaar",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Francois van Eden",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Francois.Smit",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Frans.Kruger",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Freddie - Ben Gariseb",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "freddie.mocke@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "freddiehoy2@gmail.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Freddy-Ben Gariseb",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "frikkie.oosthuysen@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ftewitz",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Funanani.Munzhelele",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gabedi.mmowa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gabriel",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "gabriel.mabitsela",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gariep SNR Tech",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Garson.Padayachee",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gawie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "george",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "george.kandiwa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "george.reiners@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gerhard.becker@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gerhard.vangreunen",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gerrie.Cloete",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gillnorishia.lategaan",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "given.mokoena",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Given.Ngobeni",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gladwin Sekharume",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Godfrey Boikhutso",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Premium"
+    },
+    {
+      "name": "Goodman Rikhotso",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gordhan",
+      "licenses": "False"
+    },
+    {
+      "name": "Gouws",
+      "licenses": "False"
+    },
+    {
+      "name": "graham.beukes",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Grant.Potgieter",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Greeff",
+      "licenses": "False"
+    },
+    {
+      "name": "greeffm@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "gretchen.waterboer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Gustav Lourens",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Hannest Koegelenberg",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "hardus",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Hein Coetzer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Heinrich Kusel",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "hendry.consalves1@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "hennie.jvr@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "henningjeremius.lubbe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Henry Mherekumombe",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Henry.Du-Toit",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "henrym@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Herbert Naobeb",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Hlomuka",
+      "licenses": "False"
+    },
+    {
+      "name": "hluphi.sello",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Hough",
+      "licenses": "False"
+    },
+    {
+      "name": "HSEQRS MP",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ian.leGrange",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ignatius.Phaka",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ingridingrid.shivambu@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Isac Zacarias",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "ishmael.radebe@kalagadi.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "israel.aphane@premierfmcg.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "iSSC",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ivan Langa",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "ivanan@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jabu.ramoji@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jabulani Christ Memela",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jacguelinemahlako.moletsi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jack.moalosi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jaco De Beer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Jaco Venter",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Premium"
+    },
+    {
+      "name": "Jaco Willer",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "jaco.beyneveldt",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jaco.buys@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jaco.joubert@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jacob.matasane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jacobs",
+      "licenses": "True"
+    },
+    {
+      "name": "Jacobs",
+      "licenses": "True"
+    },
+    {
+      "name": "jacobuss",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jacoliend",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jacov@weacheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jacov@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jacques.Tshileu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jade Chetty",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jaime.Bie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "James Tlean",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "James Tshabalala",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "james.maake",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jamie",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jan.devilliers@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jan.seyffert",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "janb@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jannie.Barnard",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jannie.vanzijl",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "janniel@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jansen",
+      "licenses": "False"
+    },
+    {
+      "name": "Jarnine Murray",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jason  Koen",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jasperjohannesjacobus.beyneveldt",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jayesh Patel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jean-Jacques",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Power Automate Free+Microsoft Fabric (Free)+Microsoft Defender for Office 365 (Plan 2)"
+    },
+    {
+      "name": "Jean Pierre Du Plessis",
+      "licenses": "Microsoft 365 Business Standard+Microsoft Defender for Office 365 (Plan 2)"
+    },
+    {
+      "name": "Jean.Kunda",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jean.leroux",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jeanclaude.Mavuya",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "JeanetteM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jeanj@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jeannyh",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jeniffer.Moroaswi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jenniqua.Kleynhans",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jeoffrey.Mudau",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jeremia.tsele@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jerry.raganya",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "JesiekaG",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jim.ramphotleng@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jimmy.Ngoma",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Joe Kies",
+      "licenses": "Microsoft Power Automate Free+Microsoft 365 Business Standard+Microsoft Power Apps Plan 2 Trial+Microsoft Fabric (Free)+Microsoft Copilot Studio Viral Trial+Microsoft Power Apps for Developer+Power Pages vTrial for Makers+Microsoft Defender for Office 365 (Plan 2)+Dynamics 365 Customer Insights Self-Service"
+    },
+    {
+      "name": "Johan Bekker",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Johan Minnaar",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Johan Rossouw",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Johan Stols",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Johan.Myburgh",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "johan.nieuwenhuis",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "johan.vandeventer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "JohanB",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Johandre Oosthuizen",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Johannes.Beyer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "JohanV",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "John.Kissimba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "John.Malaza",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Johnny.CHAUKE",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jonas.jacobs@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jordan Masters",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "jordanlionmasters",
+      "licenses": "Microsoft Fabric (Free)"
+    },
+    {
+      "name": "JoseL",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "joseph.monamodi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Jovan Combrinck",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kagiso.kotu@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kagiso.makgobela@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kagiso.modiba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kannan.subramani@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "karabo.ramushu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Katlego.Moloko",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Kaylan.Pillay",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Keith.Ashby",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kele.masiane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kenewang.paledi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Kenneth Moremi",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Kenneth.Netshitholwe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Kevin  Henwood",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Kevin Jonker",
+      "licenses": "Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Kevin.Naidoo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "KgopotsoL2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Khanyisile.Mahlangu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Khathutshelo.Mantsha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Khotso Mosala",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "khotsom@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Khoza",
+      "licenses": "False"
+    },
+    {
+      "name": "Khumbudzo.Manwatha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "KhumbulaniS",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "klaas.ratsie.langa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kmotsie@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "knaidoo459",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kobus.botha1@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Kobus.Greystein",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kobus.vanzyl",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kobusv",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "komape.ngoepe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "koosk",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kulani.makamu@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kulanic",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "kutlo.mokoto",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Landus Walters",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Lawrence.Davis",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lbritz",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lea Bodenstein",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "leane.weel@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lennox.raleho",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lenvin.Qwabe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Leon Coetzee",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Leon.Moolman",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "leon.pretorius@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "leon@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "leonbcoetzee",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "leonc@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Leroi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lesang.kobe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lesego Khuthwane",
+      "licenses": "Microsoft 365 E3+Power BI Premium Per User+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Apps for Developer+Power Pages vTrial for Makers+Microsoft Fabric (Free)+Microsoft Power Apps Plan 2 Trial+Microsoft Copilot Studio Viral Trial+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Lesego.Montshioa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lesetja.Diphoko",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lesly.maake",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lethalkobra",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lihle.Dlamini",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lineshan.Naidoo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lizzle.Cloete",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lloyd Ngobeni",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "lloyd.modiba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Londolani  Managa",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "lordwish.mathevula@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lorraine Mokgethi",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Premium"
+    },
+    {
+      "name": "lorrainem@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Louis Peacock",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Louis Peacock",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Power BI Premium Per User+Microsoft 365 E3+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Louis Zoho",
+      "licenses": "Microsoft 365 Business Standard"
+    },
+    {
+      "name": "louis.duplessis",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "louis.erasmus@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "louis.nothnagel@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lourens.snyman",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Loyiso.Madadasana",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Lubby Lubis",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Lucas Luus",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "lucas.claassen",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lucas.mokobane@za.lactalis.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lucia.madhlophe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ludwig.mashala@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lukas.stander@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "luxolo.mpafa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lyn@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "lynettep@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "magda",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mahlangu",
+      "licenses": "False"
+    },
+    {
+      "name": "Mahlodi.Riba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "MakhananiC",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Makobane",
+      "licenses": "False"
+    },
+    {
+      "name": "management@cmmconsultants.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mand\u00e9 Coetzee",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft Power Automate Free+Microsoft 365 E3"
+    },
+    {
+      "name": "Mandiso Muchanga",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Mandoyi",
+      "licenses": "False"
+    },
+    {
+      "name": "mankwe.sihlangu@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "manqoba.makhwasa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mantsi.phukubje@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marat.Tulegenov",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marcel Alberts",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marcel Schoeman",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Marcel Schoeman",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marcell.Claase",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marcelle Symons",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marcelle Symons",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mariette Du Rand",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)"
+    },
+    {
+      "name": "marina.devos@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mark.mwengwe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marshall Rasimphi",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Marthinus Admin Account",
+      "licenses": "Microsoft Power Automate Free+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Marthinus Steenkamp",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 E3+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Marthinus Steenkamp",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marthinus.Vonronge",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Martiens Van Aarde",
+      "licenses": "Microsoft Power Automate Free+Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Martin Prinsloo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Martin Prinsloo",
+      "licenses": "Microsoft Fabric (Free)"
+    },
+    {
+      "name": "MartinM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Marumo.Samuel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Masoka",
+      "licenses": "False"
+    },
+    {
+      "name": "MatabaneS",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mathatho",
+      "licenses": "False"
+    },
+    {
+      "name": "matilda.tyalibongo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "matome.maputla@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Matoyi",
+      "licenses": "False"
+    },
+    {
+      "name": "Mattews Mazibuku",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "matthews.gwadi@kalagadi.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "maureen.swart@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mbatha",
+      "licenses": "False"
+    },
+    {
+      "name": "Mbatha",
+      "licenses": "False"
+    },
+    {
+      "name": "mbongeleni.nsibande",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mbongenilungile.dhladhla",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Meachen.Cloete",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Megan Salzwedel",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Apps Plan 2 Trial+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "melissa.smit@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "melissa.steyl@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "MelissaM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mercurius.buys@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mervyn Gibbons",
+      "licenses": "Microsoft Power Automate Free+Microsoft 365 Business Standard+Microsoft Power Apps Plan 2 Trial+Microsoft Fabric (Free)+Microsoft Copilot Studio Viral Trial+Microsoft Power Apps for Developer+Power Pages vTrial for Makers+Microsoft Defender for Office 365 (Plan 2)+Dynamics 365 Customer Insights Self-Service"
+    },
+    {
+      "name": "Mervyn.DeKlerk",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Meshack Nxumalo",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Michael",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "michael.smith2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "MichaelM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Micheal Masemola",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Micheal Pretorius",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Michelle Miller",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "MichelleN",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mike Shongwe",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "mikes@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mikesh@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "millwright.kliprivier",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mindie.vanderwalt",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mitchell",
+      "licenses": "False"
+    },
+    {
+      "name": "MLotter",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Moabi",
+      "licenses": "False"
+    },
+    {
+      "name": "mocheudi.maepa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Modiba",
+      "licenses": "False"
+    },
+    {
+      "name": "modiegi.sefoloshe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mokgadi.matsapola@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mokoena",
+      "licenses": "False"
+    },
+    {
+      "name": "MOLEBS02",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mons.Nyenga",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mordecai.ilunga",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Morne Alberts",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Morne Alberts",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "morne.duplessis1@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Morne.VanDerMerwe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "MosaD",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mosala.pico",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mosehle",
+      "licenses": "False"
+    },
+    {
+      "name": "Moses.Tshabalala",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mototolo.cm@ghhmm.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mpho.Mulaudzi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mpho.Nephawe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mpilonhle.zondi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mthethwa",
+      "licenses": "False"
+    },
+    {
+      "name": "mthokozisidesmond.mthethwa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mugauri",
+      "licenses": "False"
+    },
+    {
+      "name": "Muhamad Ikram Hanif",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "muhammad.jogee@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Munyaradzi.Mahoya",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Musawenkosi.Ngcobo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Muzondiwa.washington",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mvdwesthuize",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Mzwakhe.Mseti",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "mzwanele.zito",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nadene",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nadhira Bux",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Apps for Developer+Power Pages vTrial for Makers+Microsoft Copilot Studio Viral Trial+Microsoft Power Automate Free+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "nandem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nandipha.mancoba@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nasiphi.Bewana",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Natalie.Aldridge",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nataniel.Nhanombe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nathi.moalusi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Naveem Nkkumar",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "neels.vanvuuren",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Neil Robinson",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nemanashi",
+      "licenses": "False"
+    },
+    {
+      "name": "neo.modiselle@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ngoma",
+      "licenses": "False"
+    },
+    {
+      "name": "Ngoma",
+      "licenses": "False"
+    },
+    {
+      "name": "ngwako.motsoko",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nhlanhlenhle.mngoma",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nick.davies",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nico du Plessis",
+      "licenses": "Microsoft Power Automate Free+Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Nicolas.Kazembe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nicolas.Kazembe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nicole.Seumangal",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nicolien Schutte",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Power BI Premium Per User+Microsoft 365 E3+Microsoft Fabric (Free)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Nikiel.Samuel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nkanyani",
+      "licenses": "False"
+    },
+    {
+      "name": "nkanyiso.mshengu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nkosi",
+      "licenses": "False"
+    },
+    {
+      "name": "no-reply-arc-oil@wearcheckrs.com",
+      "licenses": "Microsoft Power Automate Free+Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "No Reply",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "nobertz",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nokuthula.mpehla@za.lactalis.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nomvula  Mkhize",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "nonhlanhla.ndhlovu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Nothando.Ngidi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nsikelelo.dlamini@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "nthabeleng.tlome@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ntswaki.Mohomane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ntwanano.bandi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "oarabile.guqulwa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Octavia.Adams",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ofentse.legotsa@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Olombendo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "oluga.manyuha@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "onalenna.makgwe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Oros.vanderWalt",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Oscar.Ramphelane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ouma Modiba",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Owen.Lekhuleni",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Pandelani.Nemalamangwa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Passwell Mashoeou",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Patrick Nel",
+      "licenses": "Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Patrick.Nkanyani",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "patrickM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "patrickn@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Paul",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Paul Musgrove",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "paulus.mafongwana@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pavel.kopylov",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pdelport",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pdouglas",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "PearlP",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pedro",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Peet Peacock",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 E3"
+    },
+    {
+      "name": "peetp",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Percy Hall",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Permission Melele",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Peter",
+      "licenses": "Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Peter Els",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Peter.Davies",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "peter.rantso@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "peter.ruele@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Petlele",
+      "licenses": "False"
+    },
+    {
+      "name": "Petros.Skosana",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "phaswane.mpereke@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "PhathuM",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "phemelo.nawane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Philip Schutte",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 E3+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Philip Zoho",
+      "licenses": "Microsoft 365 Business Standard"
+    },
+    {
+      "name": "philips@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "phillip.helm@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "phillip.ndlovu@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "PhulusoN",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Phumlani.Hlomuka",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "piet.fourie@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "piet.nel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Pieter Kruger",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Pieter.Combrink",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pieter.grobler@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pieter.loots",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "pieter.loots",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Placido Maculuve",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "placido.maculuve@south32.net",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ponatshego.maubane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Power Bi Gateway Service Account",
+      "licenses": "Microsoft Power Automate Free+Power BI Premium Per User+Exchange Online (Plan 1)"
+    },
+    {
+      "name": "Premraj",
+      "licenses": "False"
+    },
+    {
+      "name": "Prince.Kwangwari",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Printer  Account",
+      "licenses": "Exchange Online (Plan 1)"
+    },
+    {
+      "name": "Prudence.Ndhlovu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Pule.Leutle",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Quirk",
+      "licenses": "False"
+    },
+    {
+      "name": "rackalmonroe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Raganya",
+      "licenses": "False"
+    },
+    {
+      "name": "Rahube.NKWANA",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Raj",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Raj.Praag",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Rakcal Balaram",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Ramushu",
+      "licenses": "False"
+    },
+    {
+      "name": "rassie.byliefeldt@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "RaygaanS",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Raymond Letsasa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Rearabetswe.Moroe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Reece Rossi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "reginald.ganyu@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Reinier Kalp",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Remote Analysis Centre Admin",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 E3"
+    },
+    {
+      "name": "renierk",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "resego.ditlhobolo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "reynhardt.duvenage@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "RFQ ConMon",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Riaan Botha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Riaan De Beer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)+Microsoft 365 Business Standard+Microsoft Power Automate Free"
+    },
+    {
+      "name": "Riaan Du Plooy",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)"
+    },
+    {
+      "name": "Riaan Geel",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "riat",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Richard.Ngobeni",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "rikak",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Robert Young",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Roger Henwood",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Rohan Willer",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free"
+    },
+    {
+      "name": "rohanw",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "rokeeya.issuf",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "roland.booth@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ronald.kgatlhane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Rose Khama",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "rose.makamo@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "roseline.makutu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "RSchoeman",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ruan Schoonbee",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Rudolph.Pienaar",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Ruwende",
+      "licenses": "False"
+    },
+    {
+      "name": "Rynhardt Meyer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Rynhardt Smit",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "rynhardt.gouws",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "ryno.pieterse@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sabelo.mehlomakhulu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sakhile.mnisi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "samuel.borole@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "samuel.venter@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sanetv",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sasha Groenwald",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sasha.groenewald",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sasha.scheepers",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Saskia",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sboniso.Ngcobo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Scheepers",
+      "licenses": "False"
+    },
+    {
+      "name": "Scott",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sean.grobbelaar",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sechaba.mokoena@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "seef@kwenamining.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sekhotso.Mofokeng",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sello.matjila@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sello.mpele@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sengamo.ntini@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Serame.Motloung",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sergent Thlou",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Service Account SQL DB Mail",
+      "licenses": "Exchange Online (Plan 1)"
+    },
+    {
+      "name": "Service Account SSRS",
+      "licenses": "Power Automate per user plan+Microsoft Power Automate Free"
+    },
+    {
+      "name": "shabeer.gangat",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "shafeer.karreem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "SharleneH",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sharon.mohlala@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Shaun Janse van Rensburg",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "shaun.britz",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Shivon Alberts",
+      "licenses": "Microsoft 365 Business Premium+Microsoft Defender for Office 365 (Plan 2)+Microsoft Fabric (Free)"
+    },
+    {
+      "name": "shoni.mathivha@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sibusiso.nxele",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Simon Difutso",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Simon Mosima",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Simon.Letube",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "simon.letube",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "simond@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "simone.dutoitme",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "simons",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "simons",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sindiswa.Thamane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sindy.thamane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Siphesihle.Hlongwane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Siphesihle.Nomzaza",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Siphiwe.Mkhize",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sipho Mathibela",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Sipho Zwane",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Sipho Zwane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sipho.Fani2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sipho.mtshali",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "sipho.xinwa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "siva.pather@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Solly Tjebane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "solly.rabbi@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sophie.Rannyane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Stanley.JIRI",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "stanley.madhuva@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "stanley.maishoane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "StanleyM2",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "stefanv",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Stephanie Du Plessis",
+      "licenses": "Microsoft 365 Business Standard+Microsoft Defender for Office 365 (Plan 2)"
+    },
+    {
+      "name": "stephanied",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sue",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sunday  Mkhatshwa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Sylvain.Bwanga",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tamara.mchunu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tambwe.billy",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tami.xulu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tau",
+      "licenses": "False"
+    },
+    {
+      "name": "Tau",
+      "licenses": "False"
+    },
+    {
+      "name": "Teresa Venter",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Thabang Mafereka",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thabang Mathumba",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Thabang.Komane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thabang.sebopelo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thabo.mawela@kalagadi.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thabo.pilane@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thabor",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thamane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thami.Xulu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thandeka.masehela@valterraplatinum.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thapelo Mohlala",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "thatot",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "TheasonG",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "themba.lekgau@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "themba.ngobeni@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Themba.Shezi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Theresa De Boer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thipem",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thlongwane",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "thokozane.maseko",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thokozaniz",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Thomas Mdhlala",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Thulani Tembe",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft Power Automate Free+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "thulanimthembu1997",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Timmoty.Nkosi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tlhoiwa",
+      "licenses": "False"
+    },
+    {
+      "name": "tmaila",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tomas",
+      "licenses": "False"
+    },
+    {
+      "name": "Tonnie Von Orel Bronte",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tonnieb",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tonny Simelani",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "TonyMo",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Totolo.Maloma",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Trevor.Dreyer",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tshepo.Mathebula",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tshidiso.serobe@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "TshireletsoJ",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tshite.Mbodi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "tsholofelo.baloyi@kcc.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tsietsi Monnanyne",
+      "licenses": "Microsoft Fabric (Free)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "Tubi.Mokotong",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tumedi.Marule",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Tumelo",
+      "licenses": "Microsoft Fabric (Free)"
+    },
+    {
+      "name": "Tumelo.Khaile",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Twoboy.Kochoka",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vadim Aseev",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vanessa",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vernon Calvert",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "victor",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Victor.matathho",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "VictorS",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "vidhakar.ramgoolam",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "vincent.modise@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "VincentT",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vinod.govender",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "vivian.sibiya",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vongani.Mkhabele",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Vuyisle Nkosi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Washington",
+      "licenses": "False"
+    },
+    {
+      "name": "WCKRS-HSEQ",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 E3"
+    },
+    {
+      "name": "Wearcheck Test Account",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "wearcheckemails@wearcheck.co.za",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Weilbach",
+      "licenses": "False"
+    },
+    {
+      "name": "Welgemoed",
+      "licenses": "False"
+    },
+    {
+      "name": "WendyW",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "wesley.botes",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Wihan Willer",
+      "licenses": "Microsoft Defender for Office 365 (Plan 2)+Microsoft 365 Business Standard"
+    },
+    {
+      "name": "willem.a.vanzyl@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "willem.dutoit@seritiza.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Willem.Verwey",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "WillemH.Botha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "William Smith",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "william.richards",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "willy.raselomane2@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "wndlovu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "wynand.schoeman@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Xolani.Mthembu",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Xolisile.Mbatha",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Yannick.Muyembe",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "yolandie.strydom@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "yusuf.andrews@angloamerican.com",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Zamantanzi.Ntanzi",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "zipho.gumede",
+      "licenses": "Unlicensed"
+    },
+    {
+      "name": "Zvoushe",
+      "licenses": "False"
+    }
+  ],
+  "sku_counts": {
+    "Microsoft Defender for Office 365 (Plan 2)": 130,
+    "Microsoft Fabric (Free)": 50,
+    "Microsoft 365 E3": 14,
+    "Microsoft 365 Business Premium": 21,
+    "Microsoft Copilot Studio Viral Trial": 7,
+    "Microsoft Power Automate Free": 52,
+    "Microsoft 365 Business Standard": 100,
+    "Exchange Online (Plan 1)": 4,
+    "Power BI Premium Per User": 6,
+    "Microsoft Power Apps Plan 2 Trial": 6,
+    "Microsoft Power Apps for Developer": 6,
+    "Power Pages vTrial for Makers": 5,
+    "Dynamics 365 Customer Insights Self-Service": 3,
+    "Power Automate per user plan": 1
+  },
+  "total_users": 842,
+  "total_licensed": 147
+}

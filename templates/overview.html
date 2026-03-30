@@ -1,0 +1,472 @@
+{% extends "base.html" %}
+{% block title %}Overview{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h4>Dashboard Overview</h4>
+    <p>Microsoft License Allocation Model &mdash; March 2026 &middot; <a href="/invoice/main" target="_blank" class="text-decoration-none">Invoice INV-0303 <i class="bi bi-file-earmark-pdf" style="color:#e74c3c"></i></a></p>
+</div>
+
+<!-- KPI Row 1: Core -->
+<div class="row g-3 mb-3">
+    <div class="col-md-3">
+        <div class="card kpi-card kpi-clickable" data-bs-toggle="modal" data-bs-target="#userModal" data-filter="all" role="button" title="Click to view all licensed accounts">
+            <div class="card-body">
+                <div class="kpi-label">Licensed Accounts</div>
+                <div class="kpi-value">{{ data.kpis.total_licensed }}</div>
+                <div class="kpi-sub text-success">{{ data.kpis.high_confidence }} high confidence</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Invoice Total (excl VAT)</div>
+                <div class="kpi-value">{{ data.kpis.invoice_excl|zar }}</div>
+                <div class="kpi-sub text-muted">incl VAT: {{ data.kpis.invoice_incl|zar }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Allocated to Users</div>
+                <div class="kpi-value">{{ data.kpis.total_allocated_to_users|zar }}</div>
+                <div class="kpi-sub text-muted">at invoice unit prices</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Unallocated / Wasted</div>
+                <div class="kpi-value text-danger">{{ data.kpis.wasted_spend|zar }}</div>
+                <div class="kpi-sub text-muted">{{ data.kpis.unassigned_licences }} unused licences being billed</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- KPI Row 2: Breakdown -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card kpi-card kpi-clickable" data-bs-toggle="modal" data-bs-target="#userModal" data-filter="Active" role="button" title="Click to view active users">
+            <div class="card-body">
+                <div class="kpi-label">Active Users</div>
+                <div class="kpi-value">{{ data.kpis.active_users }}</div>
+                <div class="kpi-sub text-muted">of {{ data.kpis.total_licensed }} total</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card kpi-clickable" data-bs-toggle="modal" data-bs-target="#userModal" data-filter="Ex-Employee" role="button" title="Click to view ex-employees">
+            <div class="card-body">
+                <div class="kpi-label">Ex-Employees</div>
+                <div class="kpi-value text-danger">{{ data.kpis.ex_employees }}</div>
+                <div class="kpi-sub text-danger">still holding licences</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card kpi-clickable" data-bs-toggle="modal" data-bs-target="#userModal" data-filter="Contractor" role="button" title="Click to view contractors">
+            <div class="card-body">
+                <div class="kpi-label">Contractors</div>
+                <div class="kpi-value">{{ data.kpis.contractors }}</div>
+                <div class="kpi-sub text-muted">review periodically</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card kpi-clickable" data-bs-toggle="modal" data-bs-target="#skuModal" role="button" title="Click to view SKU discrepancies">
+            <div class="card-body">
+                <div class="kpi-label">SKU Discrepancies</div>
+                <div class="kpi-value text-warning">{{ data.kpis.discrepant_skus }}</div>
+                <div class="kpi-sub text-muted">invoice vs admin mismatch</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card dash-card">
+            <div class="card-header">Cost Allocation by Division</div>
+            <div class="card-body">
+                <canvas id="divChart" height="260"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card dash-card">
+            <div class="card-header">Top SKUs by Monthly Cost</div>
+            <div class="card-body">
+                <canvas id="skuChart" height="260"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card dash-card">
+            <div class="card-header">Match Confidence</div>
+            <div class="card-body">
+                <canvas id="confChart" height="220"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dash-card">
+            <div class="card-header">User Status Breakdown</div>
+            <div class="card-body">
+                <canvas id="statusChart" height="220"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dash-card">
+            <div class="card-header">Division User Count</div>
+            <div class="card-body">
+                <canvas id="divUserChart" height="220"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Division Summary Table -->
+<div class="card dash-card">
+    <div class="card-header">Division Summary</div>
+    <div class="card-body">
+        <table class="table table-sm table-hover mb-0">
+            <thead>
+                <tr><th>Division</th><th class="text-end">Users</th><th class="text-end">Allocated Cost</th><th class="text-end">% of Total</th></tr>
+            </thead>
+            <tbody>
+                {% set total_cost = data.division_costs.values()|sum %}
+                {% for div in ['RS', 'AFS', 'Namibia', 'Mozambique'] %}
+                {% if div in data.division_costs %}
+                <tr>
+                    <td><strong>{{ div }}</strong></td>
+                    <td class="text-end">{{ data.division_users[div] }}</td>
+                    <td class="text-end">{{ data.division_costs[div]|zar }}</td>
+                    <td class="text-end">{{ "%.1f"|format(data.division_costs[div] / total_cost * 100 if total_cost else 0) }}%</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="table-light fw-bold">
+                    <td>TOTAL</td>
+                    <td class="text-end">{{ data.division_users.values()|sum }}</td>
+                    <td class="text-end">{{ total_cost|zar }}</td>
+                    <td class="text-end">100.0%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<!-- Invoice Reconciliation -->
+<div class="card dash-card mb-4">
+    <div class="card-header"><i class="bi bi-calculator text-primary"></i> Invoice Reconciliation</div>
+    <div class="card-body p-0">
+        <table class="table table-sm mb-0">
+            <tbody>
+                <tr>
+                    <td class="ps-3">Invoice Total (excl VAT)</td>
+                    <td class="text-end pe-3 fw-bold">{{ data.kpis.invoice_excl|zar }}</td>
+                </tr>
+                <tr>
+                    <td class="ps-3">Allocated to {{ data.kpis.total_licensed }} users (at invoice unit prices)</td>
+                    <td class="text-end pe-3">{{ data.kpis.total_allocated_to_users|zar }}</td>
+                </tr>
+                <tr class="table-warning">
+                    <td class="ps-3 fw-bold">Unallocated (wasted / unassigned)</td>
+                    <td class="text-end pe-3 fw-bold text-danger">{{ data.kpis.wasted_spend|zar }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% if data.waste_items %}
+        <div class="px-3 py-2">
+            <small class="text-muted fw-semibold">Breakdown:</small>
+        </div>
+        <table class="table table-sm table-hover mb-0">
+            <thead>
+                <tr>
+                    <th class="ps-3">SKU</th>
+                    <th class="text-end">Invoice Qty</th>
+                    <th class="text-end">Admin Users</th>
+                    <th class="text-end">Unused</th>
+                    <th class="text-end">Unit Price</th>
+                    <th class="text-end">Amount</th>
+                    <th class="pe-3">Finding</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in data.waste_items %}
+                <tr class="{{ 'table-danger' if w.unallocated > 0 else 'table-success' }}">
+                    <td class="ps-3"><small>{{ w.sku }}</small></td>
+                    <td class="text-end">{{ w.invoice_qty }}</td>
+                    <td class="text-end">{{ w.admin_users }}</td>
+                    <td class="text-end fw-bold">{{ w.unused_licences }}</td>
+                    <td class="text-end">{{ w.invoice_unit|zar }}</td>
+                    <td class="text-end fw-bold">
+                        {% if w.unallocated > 0 %}
+                        <span class="text-danger">{{ w.unallocated|zar }}</span>
+                        {% elif w.unallocated < 0 %}
+                        <span class="text-success">-{{ (-w.unallocated)|zar }}</span>
+                        {% else %}
+                        {{ w.unallocated|zar }}
+                        {% endif %}
+                    </td>
+                    <td class="pe-3"><small>{{ w.finding }}</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="table-light fw-bold">
+                    <td class="ps-3" colspan="5">NET UNALLOCATED</td>
+                    <td class="text-end text-danger">{{ data.net_unallocated|zar }}</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        {% endif %}
+    </div>
+</div>
+
+<!-- User Detail Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">Users</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0">
+                <table id="modalUserTable" class="table table-sm table-hover mb-0" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="ps-3">#</th>
+                            <th>Display Name</th>
+                            <th>Email</th>
+                            <th>Division</th>
+                            <th>Status</th>
+                            <th>Licences</th>
+                            <th class="text-end pe-3">Cost (R)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modalUserBody"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <small class="text-muted me-auto" id="modalUserCount"></small>
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SKU Discrepancy Modal -->
+<div class="modal fade" id="skuModal" tabindex="-1" aria-labelledby="skuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="skuModalLabel">SKU Discrepancies &mdash; Invoice vs Admin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0">
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="ps-3">SKU</th>
+                            <th class="text-end">Invoice Qty</th>
+                            <th class="text-end">Admin Users</th>
+                            <th class="text-end">Variance</th>
+                            <th class="pe-3">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in data.skus %}
+                        {% if s.qty_variance is not none and s.qty_variance != 0 %}
+                        <tr class="{{ 'table-danger' if s.qty_variance > 0 else 'table-success' }}">
+                            <td class="ps-3"><small>{{ s.name }}</small></td>
+                            <td class="text-end">{{ s.invoice_qty }}</td>
+                            <td class="text-end">{{ s.active_users }}</td>
+                            <td class="text-end fw-bold">{{ s.qty_variance }}</td>
+                            <td class="pe-3"><small>{{ s.variance_note }}</small></td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <small class="text-muted me-auto">{{ data.kpis.discrepant_skus }} SKU(s) with quantity mismatch</small>
+                <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+/* ── All users data for modal filtering ── */
+const ALL_USERS = {{ data.users|tojson }};
+
+const FILTER_LABELS = {
+    'all': 'All Licensed Accounts',
+    'Active': 'Active Users',
+    'Ex-Employee': 'Ex-Employees',
+    'Contractor': 'Contractors',
+    'Management Review': 'Management Review'
+};
+
+/* Handle card clicks — filter and populate modal */
+document.querySelectorAll('.kpi-clickable[data-filter]').forEach(card => {
+    card.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        const filtered = filter === 'all'
+            ? ALL_USERS
+            : ALL_USERS.filter(u => u.user_status === filter);
+
+        const tbody = document.getElementById('modalUserBody');
+        tbody.innerHTML = '';
+        filtered.forEach((u, i) => {
+            const lics = (u.all_licenses || '').split('+').map(l => l.trim()).filter(Boolean);
+            const licBadges = lics.map(l =>
+                `<span class="badge bg-light text-dark border me-1 mb-1" style="font-size:0.7rem">${l}</span>`
+            ).join('');
+            const statusClass = u.user_status === 'Ex-Employee' ? 'text-danger fw-semibold'
+                : u.user_status === 'Contractor' ? 'text-warning fw-semibold' : '';
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="ps-3">${i + 1}</td>
+                <td>${u.display_name || ''}</td>
+                <td><small>${u.email || ''}</small></td>
+                <td>${u.division || ''}</td>
+                <td class="${statusClass}">${u.user_status || ''}</td>
+                <td>${licBadges}</td>
+                <td class="text-end pe-3">R${(u.allocated_cost || 0).toLocaleString('en-ZA', {minimumFractionDigits:2})}</td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        document.getElementById('userModalLabel').textContent = FILTER_LABELS[filter] || filter;
+        const totalCost = filtered.reduce((s, u) => s + (u.allocated_cost || 0), 0);
+        document.getElementById('modalUserCount').textContent =
+            `${filtered.length} user(s)  •  Total cost: R${totalCost.toLocaleString('en-ZA', {minimumFractionDigits:2})}`;
+    });
+});
+
+/* ── Clickable card hover style ── */
+const style = document.createElement('style');
+style.textContent = `.kpi-clickable{cursor:pointer;transition:transform .15s,box-shadow .15s}.kpi-clickable:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.1)}`;
+document.head.appendChild(style);
+
+const COLORS = { RS: '#3b82f6', AFS: '#10b981', Namibia: '#f59e0b', Mozambique: '#ef4444' };
+const DIV_ORDER = ['RS', 'AFS', 'Namibia', 'Mozambique'];
+
+// Division cost donut
+const divData = {{ data.division_costs|tojson }};
+new Chart(document.getElementById('divChart'), {
+    type: 'doughnut',
+    data: {
+        labels: DIV_ORDER.filter(d => d in divData),
+        datasets: [{
+            data: DIV_ORDER.filter(d => d in divData).map(d => divData[d]),
+            backgroundColor: DIV_ORDER.filter(d => d in divData).map(d => COLORS[d]),
+            borderWidth: 0
+        }]
+    },
+    options: {
+        cutout: '60%',
+        plugins: {
+            legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } },
+            tooltip: { callbacks: { label: ctx => `${ctx.label}: R${ctx.raw.toLocaleString('en-ZA', {minimumFractionDigits:2})}` } }
+        }
+    }
+});
+
+// SKU bar chart (paid only, sorted)
+const skus = {{ data.skus|tojson }};
+const paid = skus.filter(s => s.amount > 0).sort((a, b) => b.amount - a.amount);
+new Chart(document.getElementById('skuChart'), {
+    type: 'bar',
+    data: {
+        labels: paid.map(s => s.name.length > 30 ? s.name.substring(0, 28) + '...' : s.name),
+        datasets: [{
+            data: paid.map(s => s.amount),
+            backgroundColor: '#3b82f6',
+            borderRadius: 4
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => `R${ctx.raw.toLocaleString('en-ZA', {minimumFractionDigits:2})}` } }
+        },
+        scales: {
+            x: { ticks: { callback: v => 'R' + v.toLocaleString() }, grid: { color: '#f1f5f9' } },
+            y: { grid: { display: false } }
+        }
+    }
+});
+
+// Confidence donut
+new Chart(document.getElementById('confChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['High', 'Medium', 'Low'],
+        datasets: [{
+            data: [{{ data.kpis.high_confidence }}, {{ data.kpis.medium_confidence }}, {{ data.kpis.low_confidence }}],
+            backgroundColor: ['#22c55e', '#f59e0b', '#ef4444'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        cutout: '55%',
+        plugins: { legend: { position: 'bottom', labels: { padding: 12, usePointStyle: true } } }
+    }
+});
+
+// Status breakdown
+new Chart(document.getElementById('statusChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['Active', 'Ex-Employee', 'Contractor', 'Mgmt Review'],
+        datasets: [{
+            data: [{{ data.kpis.active_users }}, {{ data.kpis.ex_employees }}, {{ data.kpis.contractors }}, {{ data.kpis.mgmt_review }}],
+            backgroundColor: ['#3b82f6', '#ef4444', '#f59e0b', '#8b5cf6'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        cutout: '55%',
+        plugins: { legend: { position: 'bottom', labels: { padding: 12, usePointStyle: true } } }
+    }
+});
+
+// Division user count bar
+const divUsers = {{ data.division_users|tojson }};
+new Chart(document.getElementById('divUserChart'), {
+    type: 'bar',
+    data: {
+        labels: DIV_ORDER.filter(d => d in divUsers),
+        datasets: [{
+            data: DIV_ORDER.filter(d => d in divUsers).map(d => divUsers[d]),
+            backgroundColor: DIV_ORDER.filter(d => d in divUsers).map(d => COLORS[d]),
+            borderRadius: 4
+        }]
+    },
+    options: {
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, grid: { color: '#f1f5f9' } }, x: { grid: { display: false } } }
+    }
+});
+</script>
+{% endblock %}

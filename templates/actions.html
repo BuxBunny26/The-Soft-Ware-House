@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% block title %}Action Items{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title">
+        <h4>Action Items</h4>
+        <p>Licence cleanup, COITE queries, and review queue</p>
+    </div>
+    <div class="page-exports" id="exportBtns"></div>
+</div>
+
+<!-- Summary cards -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Ex-Employee Licences</div>
+                <div class="kpi-value text-danger">{{ data.kpis.ex_employees }}</div>
+                <div class="kpi-sub text-danger">remove immediately</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Contractor Licences</div>
+                <div class="kpi-value text-warning">{{ data.kpis.contractors }}</div>
+                <div class="kpi-sub text-muted">review periodically</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">COITE Queries</div>
+                <div class="kpi-value">{{ data.kpis.coite_queries }}</div>
+                <div class="kpi-sub text-muted">pending response</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Duplicate Accounts</div>
+                <div class="kpi-value">{{ data.kpis.duplicate_groups }}</div>
+                <div class="kpi-sub text-muted">consolidate</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabs -->
+<ul class="nav nav-tabs mb-0" role="tablist">
+    <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cleanup" type="button">
+            <i class="bi bi-trash3"></i> Licence Cleanup ({{ data.cleanup|length }})
+        </button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#coite" type="button">
+            <i class="bi bi-question-circle"></i> COITE Queries ({{ data.queries|length }})
+        </button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#review" type="button">
+            <i class="bi bi-eye"></i> Review Queue ({{ data.reviews|length }})
+        </button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#dupes" type="button">
+            <i class="bi bi-people"></i> Duplicates ({{ data.duplicates|length }})
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <!-- Licence Cleanup -->
+    <div class="tab-pane fade show active" id="cleanup">
+        <div class="card dash-card" style="border-top-left-radius:0; border-top-right-radius:0">
+            <div class="card-body p-0">
+                <table id="cleanupTable" class="table table-sm table-hover mb-0" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Display Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Licences Held</th>
+                            <th class="text-end">Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in data.cleanup %}
+                        <tr>
+                            <td>{{ c.display_name }}</td>
+                            <td><small>{{ c.email }}</small></td>
+                            <td>
+                                <span class="badge {% if c.user_status == 'Ex-Employee' %}badge-ex{% elif c.user_status == 'Contractor' %}badge-contractor{% else %}badge-review{% endif %}">
+                                    {{ c.user_status }}
+                                </span>
+                            </td>
+                            <td><small>{{ c.licences[:60] }}{% if c.licences|length > 60 %}...{% endif %}</small></td>
+                            <td class="text-end">{{ c.licence_count }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- COITE Queries -->
+    <div class="tab-pane fade" id="coite">
+        <div class="card dash-card" style="border-top-left-radius:0; border-top-right-radius:0">
+            <div class="card-body p-0">
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>SKU / Item</th>
+                            <th class="text-end">Invoice Qty</th>
+                            <th class="text-end">Tenant Assigned</th>
+                            <th class="text-end">Unassigned</th>
+                            <th class="text-end">Unit Price</th>
+                            <th class="text-end">Monthly Waste</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for q in data.queries %}
+                        <tr>
+                            <td>{{ q.number }}</td>
+                            <td>{{ q.sku }}</td>
+                            <td class="text-end">{{ q.invoice_qty }}</td>
+                            <td class="text-end">{{ q.tenant_assigned }}</td>
+                            <td class="text-end">
+                                {% if q.unassigned and q.unassigned != 'N/A' %}
+                                <span class="badge badge-ex">{{ q.unassigned }}</span>
+                                {% else %}
+                                {{ q.unassigned }}
+                                {% endif %}
+                            </td>
+                            <td class="text-end">{% if q.unit_price != 'N/A' %}{{ q.unit_price|zar }}{% else %}N/A{% endif %}</td>
+                            <td class="text-end fw-bold text-danger">{% if q.waste > 0 %}{{ q.waste|zar }}{% else %}—{% endif %}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr class="table-light fw-bold">
+                            <td colspan="6">Total Monthly Waste</td>
+                            <td class="text-end text-danger">{{ data.kpis.wasted_spend|zar }}</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Queue -->
+    <div class="tab-pane fade" id="review">
+        <div class="card dash-card" style="border-top-left-radius:0; border-top-right-radius:0">
+            <div class="card-body">
+                {% if data.reviews %}
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Display Name</th>
+                            <th>Email</th>
+                            <th>Division</th>
+                            <th>Confidence</th>
+                            <th>Type</th>
+                            <th>Licences</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for r in data.reviews %}
+                        <tr>
+                            <td>{{ r.display_name }}</td>
+                            <td><small>{{ r.email }}</small></td>
+                            <td>{{ r.division }}</td>
+                            <td><span class="badge {% if r.confidence == 'Low' %}badge-low{% else %}badge-medium{% endif %}">{{ r.confidence }}</span></td>
+                            <td>{{ r.review_type }}</td>
+                            <td><small>{{ r.licenses }}</small></td>
+                            <td><small>{{ r.action[:50] }}</small></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-check-circle" style="font-size:2rem;color:#22c55e"></i>
+                    <p class="mt-2">No items in review queue</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Duplicates -->
+    <div class="tab-pane fade" id="dupes">
+        <div class="card dash-card" style="border-top-left-radius:0; border-top-right-radius:0">
+            <div class="card-body">
+                {% if data.duplicates %}
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Employee #</th>
+                            <th>Name</th>
+                            <th>Email 1</th>
+                            <th>Email 2</th>
+                            <th>Email 3</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for d in data.duplicates %}
+                        <tr>
+                            <td>{{ d.emp_number }}</td>
+                            <td>{{ d.emp_name }}</td>
+                            <td><small>{{ d.email1 }}</small></td>
+                            <td><small>{{ d.email2 }}</small></td>
+                            <td><small>{{ d.email3 }}</small></td>
+                            <td><small>{{ d.action[:50] }}</small></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-check-circle" style="font-size:2rem;color:#22c55e"></i>
+                    <p class="mt-2">No duplicate accounts detected</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(function() {
+    $('#cleanupTable').DataTable({
+        paging: false,
+        info: false,
+        dom: 'frtip',
+        buttons: [
+            { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn-export btn-csv', title: 'WearCheck_Licence_Cleanup_Mar2026' },
+            { extend: 'excel', text: '<i class="bi bi-file-earmark-spreadsheet"></i> Excel', className: 'btn-export btn-excel', title: 'WearCheck_Licence_Cleanup_Mar2026' },
+            { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn-export btn-pdf', title: 'WearCheck Licence Cleanup \u2014 March 2026' }
+        ],
+        order: [[2, 'asc'], [0, 'asc']]
+    }).buttons().container().appendTo('#exportBtns');
+});
+</script>
+{% endblock %}

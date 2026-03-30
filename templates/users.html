@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}User Match{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title">
+        <h4>User Match</h4>
+        <p>All {{ data.users|length }} licensed accounts with division assignment and match confidence</p>
+    </div>
+    <div class="page-exports" id="exportBtns"></div>
+</div>
+
+<!-- Filter bar -->
+<div class="filter-bar">
+    <div class="row g-2 align-items-end">
+        <div class="col-md-2">
+            <label>Division</label>
+            <select id="fDiv" class="form-select form-select-sm">
+                <option value="">All</option>
+                <option>RS</option><option>AFS</option><option>Namibia</option><option>Mozambique</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Match Status</label>
+            <select id="fStatus" class="form-select form-select-sm">
+                <option value="">All</option>
+                <option>Matched</option><option>Confirmed</option><option>Mapped by rule</option>
+                <option>Ex-Employee</option><option>Contractor</option><option>Management Review</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Confidence</label>
+            <select id="fConf" class="form-select form-select-sm">
+                <option value="">All</option>
+                <option>High</option><option>Medium</option><option>Low</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>User Status</label>
+            <select id="fUserStatus" class="form-select form-select-sm">
+                <option value="">All</option>
+                <option>Active</option><option>Ex-Employee</option><option>Contractor</option><option>Management Review</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Review Required</label>
+            <select id="fReview" class="form-select form-select-sm">
+                <option value="">All</option>
+                <option>Yes</option><option>No</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-outline-secondary btn-sm w-100" onclick="clearFilters()">
+                <i class="bi bi-x-lg"></i> Clear Filters
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Table -->
+<div class="card dash-card">
+    <div class="card-body p-0">
+        <table id="usersTable" class="table table-sm table-hover mb-0" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>Licensed Email</th>
+                    <th>Division</th>
+                    <th>Match Status</th>
+                    <th>Confidence</th>
+                    <th>User Status</th>
+                    <th>Review</th>
+                    <th>Employee</th>
+                    <th class="text-end">Cost</th>
+                    <th>SKUs</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in data.users %}
+                <tr>
+                    <td>{{ u.display_name }}</td>
+                    <td><small>{{ u.email }}</small></td>
+                    <td>{{ u.division }}</td>
+                    <td>{{ u.match_status }}</td>
+                    <td>
+                        <span class="badge {% if u.confidence == 'High' %}badge-high{% elif u.confidence == 'Medium' %}badge-medium{% else %}badge-low{% endif %}">
+                            {{ u.confidence }}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="badge {% if u.user_status == 'Active' %}badge-active{% elif u.user_status == 'Ex-Employee' %}badge-ex{% elif u.user_status == 'Contractor' %}badge-contractor{% else %}badge-review{% endif %}">
+                            {{ u.user_status }}
+                        </span>
+                    </td>
+                    <td>{{ u.review_required }}</td>
+                    <td><small>{{ u.emp_name }}{% if u.emp_number %} ({{ u.emp_number }}){% endif %}</small></td>
+                    <td class="text-end">{{ u.allocated_cost|zar }}</td>
+                    <td><small>{{ u.all_licenses|string|truncate(50, True) }}</small></td>
+                    <td><small>{{ u.mapping_note|string|truncate(40, True) }}</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(function() {
+    const table = $('#usersTable').DataTable({
+        pageLength: 25,
+        order: [[0, 'asc']],
+        dom: '<"d-flex justify-content-between align-items-center mb-2"lf>rtip',
+        buttons: [
+            { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn-export btn-csv', title: 'WearCheck_User_Match_Mar2026' },
+            { extend: 'excel', text: '<i class="bi bi-file-earmark-spreadsheet"></i> Excel', className: 'btn-export btn-excel', title: 'WearCheck_User_Match_Mar2026' },
+            { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn-export btn-pdf', title: 'WearCheck User Match \u2014 March 2026', orientation: 'landscape', pageSize: 'A3' }
+        ],
+        language: { search: '', searchPlaceholder: 'Search users...' }
+    });
+    table.buttons().container().appendTo('#exportBtns');
+
+    // Dropdown filters
+    function applyFilters() {
+        table.column(2).search($('#fDiv').val());
+        table.column(3).search($('#fStatus').val());
+        table.column(4).search($('#fConf').val());
+        table.column(5).search($('#fUserStatus').val());
+        table.column(6).search($('#fReview').val());
+        table.draw();
+    }
+
+    $('#fDiv, #fStatus, #fConf, #fUserStatus, #fReview').on('change', applyFilters);
+
+    window.clearFilters = function() {
+        $('#fDiv, #fStatus, #fConf, #fUserStatus, #fReview').val('');
+        applyFilters();
+    };
+});
+</script>
+{% endblock %}

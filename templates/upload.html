@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Upload & History{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title">
+        <h4>Upload & History</h4>
+        <p>Upload monthly COITE invoices and user exports for tracking and comparison</p>
+    </div>
+</div>
+
+<!-- Flash messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="mb-3">
+    {% for cat, msg in messages %}
+    <div class="alert alert-{{ cat }} alert-dismissible fade show" role="alert">
+        {{ msg }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+
+<div class="row g-4">
+    <!-- Upload Form -->
+    <div class="col-md-5">
+        <div class="card dash-card">
+            <div class="card-header"><i class="bi bi-cloud-upload"></i> Upload Monthly Data</div>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Month Label</label>
+                        <input type="text" name="month" class="form-control" placeholder="e.g. 2026-03 or March 2026" required>
+                        <div class="form-text">Used to organise and compare monthly data.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="bi bi-file-earmark-pdf text-danger"></i> COITE Invoice (PDF)
+                        </label>
+                        <input type="file" name="invoice" class="form-control" accept=".pdf">
+                        <div class="form-text">Upload the monthly COITE invoice PDF for reference.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="bi bi-file-earmark-spreadsheet text-success"></i> User Export (CSV or XLSX)
+                        </label>
+                        <input type="file" name="users" class="form-control" accept=".csv,.xlsx">
+                        <div class="form-text">Microsoft 365 Admin Centre user/licence export. Used for monthly comparisons.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-upload"></i> Upload
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick tips -->
+        <div class="card dash-card mt-3">
+            <div class="card-header"><i class="bi bi-lightbulb"></i> Tips</div>
+            <div class="card-body">
+                <ul class="mb-0" style="font-size:0.85rem; color:#475569;">
+                    <li class="mb-2">Upload both the invoice PDF and user CSV/XLSX each month for full tracking.</li>
+                    <li class="mb-2">User exports should be from <strong>M365 Admin Centre &gt; Users &gt; Active Users &gt; Export</strong>.</li>
+                    <li class="mb-2">After uploading, use the <strong>Monthly Comparison</strong> page to spot changes.</li>
+                    <li>Use consistent month labels (e.g. <code>2026-03</code>, <code>2026-04</code>) for clean sorting.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload History -->
+    <div class="col-md-7">
+        <div class="card dash-card">
+            <div class="card-header">
+                <i class="bi bi-clock-history"></i> Upload History
+                <span class="badge bg-primary ms-2">{{ snapshots|length }} month{{ 's' if snapshots|length != 1 }}</span>
+            </div>
+            <div class="card-body p-0">
+                {% if snapshots %}
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Uploaded</th>
+                            <th>Invoice</th>
+                            <th>Users</th>
+                            <th>Summary</th>
+                            <th>Files</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in snapshots %}
+                        <tr>
+                            <td class="fw-semibold">{{ s.month }}</td>
+                            <td><small class="text-muted">{{ s.uploaded }}</small></td>
+                            <td>
+                                {% if s.has_invoice %}
+                                <a href="/invoice/{{ s.folder }}/{{ s.invoice_file }}" target="_blank" class="badge badge-pass text-decoration-none"><i class="bi bi-file-earmark-pdf"></i> View PDF</a>
+                                {% else %}
+                                <span class="badge" style="background:#f1f5f9;color:#94a3b8">No</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if s.has_users %}
+                                <span class="badge badge-pass"><i class="bi bi-check"></i> Yes</span>
+                                {% else %}
+                                <span class="badge" style="background:#f1f5f9;color:#94a3b8">No</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if s.has_summary %}
+                                <span class="badge badge-pass"><i class="bi bi-check"></i> Ready</span>
+                                {% else %}
+                                <span class="badge badge-medium">Pending</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% for f in s.files %}
+                                <small class="d-block text-muted">{{ f }}</small>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <form method="POST" action="/upload/delete/{{ s.folder }}" class="d-inline"
+                                      onsubmit="return confirm('Delete all data for {{ s.month }}?')">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="p-4 text-center text-muted">
+                    <i class="bi bi-inbox" style="font-size:2rem"></i>
+                    <p class="mt-2 mb-0">No monthly data uploaded yet. Upload your first month above.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

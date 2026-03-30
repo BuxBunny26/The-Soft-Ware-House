@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% block title %}Monthly Comparison{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title">
+        <h4>Monthly Comparison</h4>
+        <p>Compare user counts and licence changes between months</p>
+    </div>
+</div>
+
+<!-- Month selector -->
+<div class="card dash-card mb-4">
+    <div class="card-body">
+        <form method="GET" class="row g-3 align-items-end">
+            <div class="col-md-4">
+                <label class="form-label fw-semibold">Older Month</label>
+                <select name="older" class="form-select">
+                    <option value="">-- Select --</option>
+                    <option value="__current__" {{ 'selected' if selected_older == '__current__' }}>Current (March 2026 Model)</option>
+                    {% for s in snapshots %}
+                    <option value="{{ s.folder }}" {{ 'selected' if selected_older == s.folder }}>{{ s.month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label fw-semibold">Newer Month</label>
+                <select name="newer" class="form-select">
+                    <option value="">-- Select --</option>
+                    <option value="__current__" {{ 'selected' if selected_newer == '__current__' }}>Current (March 2026 Model)</option>
+                    {% for s in snapshots %}
+                    <option value="{{ s.folder }}" {{ 'selected' if selected_newer == s.folder }}>{{ s.month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-arrow-left-right"></i> Compare
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if comparison %}
+<!-- Comparison Results -->
+
+<!-- KPIs -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">{{ comparison.older_month }}</div>
+                <div class="kpi-value">{{ comparison.older_total }}</div>
+                <div class="kpi-sub text-muted">total users</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">{{ comparison.newer_month }}</div>
+                <div class="kpi-value">{{ comparison.newer_total }}</div>
+                <div class="kpi-sub text-muted">total users</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">User Change</div>
+                <div class="kpi-value {{ 'text-success' if comparison.user_change > 0 else 'text-danger' if comparison.user_change < 0 else '' }}">
+                    {{ '%+d'|format(comparison.user_change) }}
+                </div>
+                <div class="kpi-sub text-muted">net change</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">SKU Changes</div>
+                <div class="kpi-value text-warning">{{ comparison.sku_changes|length }}</div>
+                <div class="kpi-sub text-muted">licences with count changes</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- SKU Changes -->
+    <div class="col-md-6">
+        <div class="card dash-card">
+            <div class="card-header"><i class="bi bi-bar-chart"></i> Licence Count Changes</div>
+            <div class="card-body p-0">
+                {% if comparison.sku_changes %}
+                <table class="table table-sm table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>SKU</th>
+                            <th class="text-end">{{ comparison.older_month }}</th>
+                            <th class="text-end">{{ comparison.newer_month }}</th>
+                            <th class="text-end">Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in comparison.sku_changes %}
+                        <tr>
+                            <td><small>{{ c.sku }}</small></td>
+                            <td class="text-end">{{ c.old_count }}</td>
+                            <td class="text-end">{{ c.new_count }}</td>
+                            <td class="text-end fw-bold {{ 'text-success' if c.change > 0 else 'text-danger' }}">
+                                {{ '%+d'|format(c.change) }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="p-4 text-center text-muted">
+                    <i class="bi bi-check-circle" style="font-size:1.5rem; color:#10b981"></i>
+                    <p class="mt-2 mb-0">No licence count changes between these months.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- User Changes -->
+    <div class="col-md-6">
+        <div class="card dash-card mb-4">
+            <div class="card-header">
+                <i class="bi bi-person-plus text-success"></i> Users Added
+                <span class="badge bg-success ms-2">{{ comparison.users_added|length }}</span>
+            </div>
+            <div class="card-body p-0">
+                {% if comparison.users_added %}
+                <ul class="list-group list-group-flush">
+                    {% for name in comparison.users_added %}
+                    <li class="list-group-item py-1"><small>{{ name }}</small></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <div class="p-3 text-center text-muted"><small>No new users</small></div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card dash-card">
+            <div class="card-header">
+                <i class="bi bi-person-dash text-danger"></i> Users Removed
+                <span class="badge bg-danger ms-2">{{ comparison.users_removed|length }}</span>
+            </div>
+            <div class="card-body p-0">
+                {% if comparison.users_removed %}
+                <ul class="list-group list-group-flush">
+                    {% for name in comparison.users_removed %}
+                    <li class="list-group-item py-1"><small>{{ name }}</small></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <div class="p-3 text-center text-muted"><small>No users removed</small></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if comparison.sku_changes %}
+<!-- Chart -->
+<div class="card dash-card mt-4">
+    <div class="card-header"><i class="bi bi-graph-up"></i> Licence Count Comparison</div>
+    <div class="card-body">
+        <canvas id="compareChart" height="200"></canvas>
+    </div>
+</div>
+{% endif %}
+
+{% elif selected_older or selected_newer %}
+<div class="alert alert-warning">
+    <i class="bi bi-exclamation-triangle"></i> Please select two different months with available summaries to compare.
+</div>
+{% else %}
+<div class="card dash-card">
+    <div class="card-body text-center py-5 text-muted">
+        <i class="bi bi-arrow-left-right" style="font-size:3rem"></i>
+        <h5 class="mt-3">Select Two Months to Compare</h5>
+        <p>Upload monthly user exports on the <a href="/upload">Upload & History</a> page first, then come back here to compare.</p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if comparison and comparison.sku_changes %}
+<script>
+const changes = {{ comparison.sku_changes|tojson }};
+const labels = changes.map(c => c.sku.length > 30 ? c.sku.substring(0,30) + '...' : c.sku);
+new Chart(document.getElementById('compareChart'), {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [
+            {
+                label: '{{ comparison.older_month }}',
+                data: changes.map(c => c.old_count),
+                backgroundColor: '#94a3b8',
+                borderRadius: 4,
+            },
+            {
+                label: '{{ comparison.newer_month }}',
+                data: changes.map(c => c.new_count),
+                backgroundColor: '#3b82f6',
+                borderRadius: 4,
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        indexAxis: 'y',
+        plugins: {
+            legend: { position: 'top' },
+        },
+        scales: {
+            x: { beginAtZero: true, grid: { display: false } },
+            y: { grid: { display: false } }
+        }
+    }
+});
+</script>
+{% endif %}
+{% endblock %}

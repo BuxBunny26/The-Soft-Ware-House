@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+{% block title %}Cost Analysis{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title">
+        <h4>Cost Analysis</h4>
+        <p>SKU-level cost breakdown and invoice reconciliation</p>
+    </div>
+    <div class="page-exports" id="exportBtns"></div>
+</div>
+
+<!-- Quick KPIs -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Invoice Total (excl VAT)</div>
+                <div class="kpi-value">{{ data.kpis.invoice_excl|zar }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Paid SKUs</div>
+                <div class="kpi-value">{{ data.kpis.paid_skus }} <small class="text-muted fw-normal">/ {{ data.kpis.total_skus }}</small></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Quantity Discrepancies</div>
+                <div class="kpi-value text-warning">{{ data.kpis.discrepant_skus }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card kpi-card">
+            <div class="card-body">
+                <div class="kpi-label">Unallocated (Wasted)</div>
+                <div class="kpi-value text-danger">{{ data.kpis.wasted_spend|zar }}</div>
+                <div class="kpi-sub text-muted">{{ data.kpis.unassigned_licences }} unused licences</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toggle -->
+<div class="mb-3">
+    <div class="btn-group btn-group-sm" role="group">
+        <input type="radio" class="btn-check" name="skuFilter" id="showAll" checked>
+        <label class="btn btn-outline-primary" for="showAll">All SKUs</label>
+        <input type="radio" class="btn-check" name="skuFilter" id="showPaid">
+        <label class="btn btn-outline-primary" for="showPaid">Paid Only</label>
+        <input type="radio" class="btn-check" name="skuFilter" id="showFree">
+        <label class="btn btn-outline-primary" for="showFree">Free / Trial</label>
+    </div>
+</div>
+
+<!-- SKU Cost Table -->
+<div class="card dash-card mb-4">
+    <div class="card-header">SKU Cost Breakdown</div>
+    <div class="card-body p-0">
+        <table id="skuTable" class="table table-sm table-hover mb-0" style="width:100%">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Type</th>
+                    <th class="text-end">Active Users</th>
+                    <th class="text-end">Invoice Qty</th>
+                    <th class="text-end">Qty Var</th>
+                    <th class="text-end">Monthly Amount</th>
+                    <th class="text-end">Invoice Unit Price</th>
+                    <th>Variance Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in data.skus %}
+                <tr data-type="{{ 'paid' if s.amount > 0 else 'free' }}">
+                    <td>{{ s.name }}</td>
+                    <td>
+                        {% if s.amount > 0 %}
+                        <span class="badge badge-active">Paid</span>
+                        {% else %}
+                        <span class="badge" style="background:#f1f5f9;color:#64748b">Free</span>
+                        {% endif %}
+                    </td>
+                    <td class="text-end">{{ s.active_users }}</td>
+                    <td class="text-end">{{ s.invoice_qty if s.invoice_qty is not none else 'N/A' }}</td>
+                    <td class="text-end">
+                        {% if s.qty_variance is not none and s.qty_variance != 0 %}
+                        <span class="{% if s.qty_variance > 0 %}text-warning{% else %}text-danger{% endif %} fw-bold">
+                            {{ '%+d'|format(s.qty_variance) }}
+                        </span>
+                        {% elif s.qty_variance == 0 %}
+                        <span class="text-success">0</span>
+                        {% else %}
+                        —
+                        {% endif %}
+                    </td>
+                    <td class="text-end fw-semibold">{{ s.amount|zar if s.amount > 0 else '—' }}</td>
+                    <td class="text-end">{{ s.invoice_unit|zar if s.invoice_unit > 0 else '—' }}</td>
+                    <td><small>{{ s.variance_note[:50] }}</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="table-light fw-bold">
+                    <td>TOTAL</td>
+                    <td></td>
+                    <td class="text-end">{{ data.skus|sum(attribute='active_users') }}</td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-end">{{ data.kpis.invoice_excl|zar }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<!-- Division x SKU Allocation -->
+<div class="card dash-card mb-4">
+    <div class="card-header">Division Cost Allocation</div>
+    <div class="card-body p-0">
+        <table id="divTable" class="table table-sm table-hover mb-0" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Division</th>
+                    <th class="text-end">Users</th>
+                    <th class="text-end">Allocated Cost</th>
+                    <th class="text-end">% Share</th>
+                    <th class="text-end">Avg Cost / User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set total_cost = data.division_costs.values()|sum %}
+                {% for div in ['RS', 'AFS', 'Namibia', 'Mozambique'] %}
+                {% if div in data.division_costs %}
+                <tr>
+                    <td><strong>{{ div }}</strong></td>
+                    <td class="text-end">{{ data.division_users[div] }}</td>
+                    <td class="text-end">{{ data.division_costs[div]|zar }}</td>
+                    <td class="text-end">{{ "%.1f"|format(data.division_costs[div] / total_cost * 100 if total_cost else 0) }}%</td>
+                    <td class="text-end">{{ (data.division_costs[div] / data.division_users[div])|round(2)|zar if data.division_users[div] else '—' }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="table-light fw-bold">
+                    <td>TOTAL</td>
+                    <td class="text-end">{{ data.division_users.values()|sum }}</td>
+                    <td class="text-end">{{ total_cost|zar }}</td>
+                    <td class="text-end">100.0%</td>
+                    <td class="text-end">{{ (total_cost / (data.division_users.values()|sum))|round(2)|zar if data.division_users.values()|sum else '—' }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<!-- Discrepancy Table -->
+{% set disc_skus = data.skus|selectattr('qty_variance')|list %}
+{% set disc_skus = disc_skus|selectattr('qty_variance', 'ne', 0)|list %}
+<!-- Unallocated / Wasted Licences Breakdown -->
+{% if data.waste_items %}
+<div class="card dash-card mb-4">
+    <div class="card-header"><i class="bi bi-exclamation-triangle text-danger"></i> Unallocated Licence Cost (Wasted Spend)</div>
+    <div class="card-body p-0">
+        <table class="table table-sm table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th class="text-end">Invoice Qty</th>
+                    <th class="text-end">Admin Users</th>
+                    <th class="text-end">Unused</th>
+                    <th class="text-end">Unit Price</th>
+                    <th class="text-end">Invoice Total</th>
+                    <th class="text-end">Allocated</th>
+                    <th class="text-end">Unallocated</th>
+                    <th>Finding</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in data.waste_items %}
+                <tr class="{{ 'table-danger' if w.unallocated > 0 else 'table-success' }}">
+                    <td>{{ w.sku }}</td>
+                    <td class="text-end">{{ w.invoice_qty }}</td>
+                    <td class="text-end">{{ w.admin_users }}</td>
+                    <td class="text-end fw-bold">{{ w.unused_licences }}</td>
+                    <td class="text-end">{{ w.invoice_unit|zar }}</td>
+                    <td class="text-end">{{ w.invoice_total|zar }}</td>
+                    <td class="text-end">{{ w.allocated|zar }}</td>
+                    <td class="text-end fw-bold">
+                        {% if w.unallocated > 0 %}
+                        <span class="text-danger">{{ w.unallocated|zar }}</span>
+                        {% elif w.unallocated < 0 %}
+                        <span class="text-success">-{{ (-w.unallocated)|zar }}</span>
+                        {% else %}
+                        {{ w.unallocated|zar }}
+                        {% endif %}
+                    </td>
+                    <td><small>{{ w.finding }}</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="table-light fw-bold">
+                    <td colspan="7">NET UNALLOCATED</td>
+                    <td class="text-end text-danger">{{ data.net_unallocated|zar }}</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+{% if disc_skus %}
+<div class="card dash-card">
+    <div class="card-header">
+        <i class="bi bi-exclamation-diamond text-warning"></i> Invoice vs Admin Quantity Discrepancies
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-sm mb-0">
+            <thead>
+                <tr><th>SKU</th><th class="text-end">Admin Users</th><th class="text-end">Invoice Qty</th><th class="text-end">Variance</th><th>Impact</th></tr>
+            </thead>
+            <tbody>
+                {% for s in disc_skus %}
+                <tr>
+                    <td>{{ s.name }}</td>
+                    <td class="text-end">{{ s.active_users }}</td>
+                    <td class="text-end">{{ s.invoice_qty }}</td>
+                    <td class="text-end">
+                        <span class="badge {% if s.qty_variance > 0 %}badge-medium{% else %}badge-ex{% endif %}">
+                            {{ '%+d'|format(s.qty_variance) }}
+                        </span>
+                    </td>
+                    <td><small>{{ s.variance_note[:60] }}</small></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(function() {
+    const table = $('#skuTable').DataTable({
+        paging: false,
+        info: false,
+        dom: 'frtip',
+        buttons: [
+            { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn-export btn-csv', title: 'WearCheck_SKU_Costs_Mar2026' },
+            { extend: 'excel', text: '<i class="bi bi-file-earmark-spreadsheet"></i> Excel', className: 'btn-export btn-excel', title: 'WearCheck_SKU_Costs_Mar2026' },
+            { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn-export btn-pdf', title: 'WearCheck SKU Costs \u2014 March 2026', orientation: 'landscape' }
+        ],
+        order: [[5, 'desc']]
+    });
+    table.buttons().container().appendTo('#exportBtns');
+
+    $('input[name=skuFilter]').on('change', function() {
+        const id = this.id;
+        if (id === 'showAll') {
+            table.rows().nodes().to$().show();
+        } else if (id === 'showPaid') {
+            table.rows().nodes().to$().each(function() {
+                $(this).toggle($(this).data('type') === 'paid');
+            });
+        } else {
+            table.rows().nodes().to$().each(function() {
+                $(this).toggle($(this).data('type') === 'free');
+            });
+        }
+    });
+});
+</script>
+{% endblock %}
